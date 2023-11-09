@@ -1,6 +1,6 @@
 ;;-*-Lisp-*-
 (in-package goal)
-
+;;  :turning-accel (meters 25)
 ;; name: bike.gc
 ;; name in dgo: bike
 ;; dgos: CWI
@@ -88,26 +88,26 @@
     :max-engine-thrust (meters 50)
     :inv-max-engine-thrust 0.0000048828124
     :engine-response-rate 60.0
-    :engine-intake-factor 1.5
+    :engine-intake-factor 100.5
     :brake-factor 3.5
     :turbo-boost-factor 1.0
-    :max-xz-speed (meters 40)
+    :max-xz-speed (meters 200)
     :ground-probe-distance (meters 5)
     :cos-ground-effect-angle 0.42261824
     :spring-lift-factor 0.3
-    :air-drag-factor 1.0
-    :steering-thruster-factor 5.0
-    :steering-thruster-max-gain 4.0
+    :air-drag-factor 0.0
+    :steering-thruster-factor 9.0
+    :steering-thruster-max-gain 8.0
     :steering-thruster-half-gain-speed (meters 15)
-    :tire-friction-factor 0.5
-    :tire-static-friction 0.55
-    :tire-dynamic-friction 0.4
+    :tire-friction-factor 0.0
+    :tire-static-friction 0.0
+    :tire-dynamic-friction 0.0
     :tire-dynamic-friction-speed (meters 2)
     :tire-inv-max-friction-speed 0.000024414063
-    :airfoil-factor 1.0
-    :drag-force-factor 1.0
-    :speed-scrubbing-drag 10.0
-    :speed-limiting-drag 0.75
+    :airfoil-factor 0.0
+    :drag-force-factor 0.0
+    :speed-scrubbing-drag 0.0
+    :speed-limiting-drag 0.0
     :pitch-control-factor 1.0
     :roll-control-factor 1.0
     :jump-thrust-factor 0.625
@@ -115,8 +115,8 @@
     :player-weight 163840.0
     :player-shift-x (meters 0.6)
     :player-shift-z (meters 1)
-    :target-speed-offset (meters 4)
-    :turning-accel (meters 25)
+    :target-speed-offset (meters 0)
+    :turning-accel (meters 200)
     :toughness-factor 1.0
     :damage-factor 4.0
     :camera-string-min-height (meters 4.5)
@@ -183,8 +183,8 @@
     :explosion-part #xa1
     :headlight-count 1
     :taillight-count 1
-    :thruster-flame-width (meters 0.6)
-    :thruster-flame-length (meters 2)
+    :thruster-flame-width (meters 1.0)
+    :thruster-flame-length (meters 6)
     :thruster-local-pos (new 'static 'inline-array vector 2
       (new 'static 'vector :x 1024.0 :z -3276.8 :w 1.0)
       (new 'static 'vector :x -1024.0 :z -3276.8 :w 1.0)
