@@ -99,9 +99,9 @@
     :steering-thruster-factor 9.0
     :steering-thruster-max-gain 8.0
     :steering-thruster-half-gain-speed (meters 15)
-    :tire-friction-factor 0.0
-    :tire-static-friction 0.0
-    :tire-dynamic-friction 0.0
+    :tire-friction-factor 2.0
+    :tire-static-friction 0.55
+    :tire-dynamic-friction 2.0
     :tire-dynamic-friction-speed (meters 2)
     :tire-inv-max-friction-speed 0.000024414063
     :airfoil-factor 0.0
@@ -110,7 +110,7 @@
     :speed-limiting-drag 0.0
     :pitch-control-factor 1.0
     :roll-control-factor 1.0
-    :jump-thrust-factor 0.625
+    :jump-thrust-factor 1.625
     :buoyancy-factor 1.0
     :player-weight 163840.0
     :player-shift-x (meters 0.6)
