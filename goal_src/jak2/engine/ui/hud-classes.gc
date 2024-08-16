@@ -121,7 +121,8 @@
       )
     )
   (when (not (paused?))
-    (let ((v1-10 8))
+    ;; og:preserve-this high fps fix
+    (let ((v1-10 (* DISPLAY_FPS_RATIO 8)))
       (if (and (< (-> this values 1 target) 270) (< 270 (+ (-> this values 1 target) v1-10)))
           (set! (-> this values 1 target) 270)
           )
@@ -546,8 +547,7 @@
 
 (defmethod update-value-callback ((this hud-skill) (arg0 int) (arg1 int))
   (if (> arg1 0)
-     (sound-play "skill-pickup" :pitch 0.5)
-     ;;(none)
+      (sound-play "skill-pickup" :pitch 0.5)
       )
   0
   (none)
